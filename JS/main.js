@@ -6,7 +6,7 @@ const addItemButton = document.querySelector("#add-product")
 const inputSearch = document.querySelector('.input-wrapper input')
 app.add(1)
 app.add(2)
-inputSearch.addEventListener('keydown', displayOptions);
+inputSearch.addEventListener('keyup', displayOptions);
 
 
 addItemButton.addEventListener('click',(event)=>{
@@ -18,24 +18,31 @@ addItemButton.addEventListener('click',(event)=>{
 
 function passageOfEachProductInDataBase(){
     let isExists = true
-    listOfItems = []
+    let listOfItems = []
+    listOfItems.push('item1')
+    let actualString = inputSearch.value
     while (isExists){
-        let actualString = inputSearch.value
-        let x = 1
-        const actualProduct = app.viewProductsInput(x)
+    
+        let x = 4
+        x++
+        const actualProduct =  app.viewProductsInput(x)
+        console.log(actualProduct)
         if(actualProduct){
-            if(actualString.includes(actualProduct.tittle) ){
+            if(actualString.includes(String(actualProduct.title)) ){
                 listOfItems.push(actualProduct)
-            } else isExists = false; 
-
-        }
-
+                console.log(listOfItems)
+            } else{
+                let indexNot = listOfItems.indexOf(!listOfItems.includes(actualString))
+                listOfItems.slice(indexNot, 1)
+            }
+        } else return
     }
 }
 
 
-function displayOptions(){
+function displayOptions(keycode){
+    const letter = keycode
+    console.log(inputSearch.value)
+    passageOfEachProductInDataBase()
     
-    
-    inputSearch.value
 }
