@@ -20,9 +20,9 @@ export class DataProducts{
        <img class="product-img" src="${product.image}" alt="">
        <div class="description">
            <h1 id="product-title">${product.title}</h1>
-           <p id="price">${product.price}</p>
-           <p id="description">${product.description}</p>
-           <p id="rate">${product.rating.rate}</p>
+           <p id="price">R$${product.price}</p>
+           <p id="category">${product.category}</p>
+           <p id="rate">${product.rating.rate} stars</p>
        </div>
        
        `
@@ -43,13 +43,14 @@ export class ApiConnectionProducts extends DataProducts {
         const endpoint = `https://fakestoreapi.com/products/${id}` 
         return fetch(endpoint)
         .then(data => data.json())
-        .then(({price, id, image, title,rating,description})=>({
+        .then(({price, id, image, title,rating,description, category})=>({
             price,
             id,
             image,
             title,
             rating,
-            description
+            description,
+            category
         }))
     }
 

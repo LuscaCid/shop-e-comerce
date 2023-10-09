@@ -94,37 +94,45 @@ header ul li:hover {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 92%;
     margin: auto;
     gap: 1rem;
 }
 .description{
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    width: fit-content;
+    width: 30rem
 }
 .description P { 
     font-size: 1.3rem;
 }
 .product-card{
     box-shadow: 0 1rem 2rem -1rem rgb(0,0,0,0.5);
-    max-width: 50rem ;
+    width: 45%;
     gap: 1.4rem;
     display: flex;
-    width: fit-content;
-    padding: 2rem 1.4rem;
-    color: white;
-    background:rgb(32, 32, 32) ;
+    flex-direction: row;
+    border-radius: 0 0 .6rem 0.6rem;
+    height: 23rem;
+    color: rgb(70, 70, 70);
+    background:linear-gradient(120deg, white, rgb(219, 219, 219)) ;
+    transition: transform 0.3s;
+    
+}
+.product-card:hover{
+    transform: translateY(-5);
+    transform: scale(1.03);
 }
 .product-card h1{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 .product-card img {
-    width: 15rem;
-    border-radius: .6rem;
-    object-fit: cover;
-    height: 20rem;
+    width: 23rem;
+
+    
+  
 }
 .input-wrapper input{
     background: rgb(175, 175, 175);

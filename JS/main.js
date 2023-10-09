@@ -1,13 +1,13 @@
 import { ApiConnectionProducts } from "./ApiConnectionProducts.js"
 const app = new ApiConnectionProducts()
 console.log('oi')
+let id = 3
 const addItemButton = document.querySelector("#add-product")
-
-addItemButton.addEventListener('click',()=>{
-    
-})
+app.add(1)
 app.add(2)
-app.add(5)
-app.add(3)
-app.add(13)
-app.add(15)
+addItemButton.addEventListener('click',(event)=>{
+    event.preventDefault()
+    console.log('click')
+    app.add(id)
+    id++;
+})
