@@ -1,9 +1,13 @@
 export class DataProducts{
     produtos = document.querySelectorAll('.product-card')
+    pesquisados = document.querySelectorAll('.caixa-de-itens button')
     secao = document.querySelector('.secao-produtos')
-    constructor(){/**remover os produtos */
+    constructor(){/**remover os produtos e botoes pesquisados */
         this.produtos.forEach((produto)=>{
             produto.remove()
+        })
+        this.pesquisados.forEach((pesquisado)=>{
+            pesquisado.remove()
         })
     }
 
@@ -53,7 +57,10 @@ export class ApiConnectionProducts extends DataProducts {
             category
         }))
     }
-
+    async viewProductsInput(id){
+        const product = await this.getProducts(id);
+        return product
+    }
     async add(id){
         const product = await this.getProducts(id);
         console.log(product);
