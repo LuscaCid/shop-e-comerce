@@ -50,15 +50,15 @@ header ul li:hover {
 #add-product{
     padding: 1rem;
     border: none;
-    background: white;
+    background: linear-gradient(120deg, white, rgb(14, 14, 14));
     border-radius: 0.6rem;
     font-weight: 800;
     cursor: pointer;
-    transition: background 0.4s, color 0.3s;
+    transition: transform 0.3s;
 }
-#add-product:hover{
-    background: black;
-    color: white;
+#add-product:hover{  
+    transform: translateY(-3px);
+ 
 }
 .texts-apresentation{
     margin: auto;
