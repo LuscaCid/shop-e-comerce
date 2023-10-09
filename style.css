@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+:root{
+    font-size: 62.5%;
+}
+header{
+    padding-left: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: rgb(116, 202, 181);
+    align-items: center;
+}
+header h1{
+    color: white;
+    font-size: 2.2rem;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 800;
+}
+ul{
+    list-style: none;
+    display: flex;
+    
+   
+    font-size: 1.4rem;
+    font-family: 'Epilogue', sans-serif;
+}
+header ul li{
+    padding: 1rem;
+    transition: background 0.4s;
+}
+header ul li a{ 
+    
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+header ul li:hover {
+    background: rgb(2, 2, 2);
+}
+.app {
+    
+    
+}
+#add-product{
+    padding: 1rem;
+    border: none;
+    background: white;
+    border-radius: 0.6rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.4s, color 0.3s;
+}
+#add-product:hover{
+    background: black;
+    color: white;
+}
+.texts-apresentation{
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+.texts-apresentation h1{
+    font-size: 3.5rem;
+}
+.texts-apresentation p {
+    font-size: 1.5rem;
+}
+.primary-apresentation{
+    color: white;
+    gap: 2rem;
+    width: min(70rem, 90%);
+    display: flex;
+    margin:5rem auto;
+    background: rgba(255, 113, 113, 0.932);
+    border-radius: .6rem;
+}
+#apresentation{
+    border-radius: 0 0.6rem 0.6rem 0;
+
+    width: 50rem;
+}
